@@ -1,0 +1,88 @@
+@import "../variables.scss";
+.container {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(60px);
+	position: fixed;
+	top: 0;
+	z-index: 999;
+
+	.header {
+		max-width: 1440px;
+		width: calc(100% - 200px);
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		padding: 30px 0;
+
+		&__nav {
+			max-width: 564px;
+			width: 100%;
+			display: flex;
+			ul {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			a {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 130%;
+				color: $color-text;
+			}
+		}
+
+		.header__btn {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			img {
+				padding-right: 6.67px;
+			}
+
+			.btn__logIn {
+				a {
+					display: flex;
+					align-items: center;
+					gap: 10.67px;
+					font-family: "Gotham Pro";
+					font-style: normal;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 120%;
+					/* or 19px */
+					letter-spacing: 0.003em;
+					background: linear-gradient(45.12deg, #7aafff -1.54%, $secondary 108.79%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					mix-blend-mode: transparent;
+				}
+			}
+			.btn__invite {
+				a {
+					display: flex;
+					gap: 10.04px;
+					padding: 10px 20px;
+					background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+					border-radius: 22px;
+
+					p {
+						color: $white;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 120%;
+						letter-spacing: 0.003em;
+					}
+				}
+			}
+			.header__language {
+				width: 65px;
+			}
+		}
+	}
+}
