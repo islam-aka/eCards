@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './MainScreen.module.scss'
 import image from '../../assets/img/Главная.png'
-import BtnInvite from '../../UI/BtnInvite'
+import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
-import iconPlus from '../../assets/svg/plus1.svg'
+import iconPlus from '../../assets/svg/plus.svg'
 import LogoSocial from '../LogoSocial/LogoSocial'
+import { Link } from 'react-router-dom'
 
 const MainScreen = () => {
 	return (
@@ -18,12 +19,15 @@ const MainScreen = () => {
 					Facebook, Google и др., удобный интерфейс и оперативная тех.поддержка
 				</p>
 				<div className={styles.container__btn}>
-					<BtnInvite />
-					<div>
-						<a href='#'>
-							Ознакомиться с условиями
-							<img src={iconRightLogIn} alt='icon right' />
-						</a>
+					<Link to={'in'}>
+						<div className={styles.btn__invite}>
+							<p>Получить инвайт</p>
+							<img src={iconRight} alt='icon right' />
+						</div>
+					</Link>
+					<div className={styles.btn__conditions}>
+						<p>Ознакомиться с условиями </p>
+						<img src={iconRightLogIn} alt='icon right' />
 					</div>
 				</div>
 				<div className={styles.container__info}>
@@ -41,6 +45,8 @@ const MainScreen = () => {
 					<LogoSocial />
 				</div>
 			</div>
+			<div className={styles.blockBlur}></div>
+			<div className={styles.blockBlur__two}></div>
 			<div className={styles.container__bg}>
 				<img src={image} alt='asd' />
 			</div>

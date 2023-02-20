@@ -7,6 +7,7 @@ import '../../i18next'
 const DropDown = () => {
 	const { i18n } = useTranslation()
 	const [language, setLanguage] = useState(undefined)
+
 	const [active, setActive] = useState(true)
 
 	const dropDownActive = () => {
@@ -18,7 +19,7 @@ const DropDown = () => {
 			.replace(/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/, '$1')
 			.slice(1)
 		i18n.changeLanguage(data)
-		setLanguage(data)
+		setLanguage(data === '' ? 'RU' : data)
 	}
 
 	const check = str => {

@@ -1,0 +1,103 @@
+@import "../variables.scss";
+
+.contact {
+	max-width: 1440px;
+	width: calc(100% - 200px);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.contact__left {
+		width: 666px;
+		height: 247px;
+		.contact__subTitle {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 130%;
+			letter-spacing: 0.003em;
+			color: $primary-main;
+			margin-bottom: 10px;
+		}
+		.contact__left_title {
+			font-weight: 700;
+			font-size: 42px;
+			line-height: 120%;
+			letter-spacing: 0.003em;
+			color: $color-text;
+			margin-bottom: 20px;
+		}
+		.contact__left_time {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 120%;
+			letter-spacing: -0.007em;
+			color: $sub-title;
+			span {
+				margin-left: 8px;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $color-text;
+			}
+		}
+	}
+	.contact__right {
+		position: relative;
+		width: 548px;
+		height: 350px;
+		display: flex;
+
+		.iconOne {
+			position: absolute;
+			left: 167px;
+			top: 0px;
+			animation: aniOne 1.5s infinite;
+		}
+		.iconTwo {
+			position: absolute;
+			left: 0px;
+			top: 128px;
+			animation: aniTwo 2s infinite;
+		}
+		.iconThree {
+			position: absolute;
+			left: 232px;
+			top: 34px;
+			animation: aniThree 2.5s infinite;
+		}
+	}
+	@keyframes aniOne {
+		0% {
+			top: 0px;
+		}
+		50% {
+			top: 4px;
+		}
+		100% {
+			top: 0px;
+		}
+	}
+	@keyframes aniTwo {
+		0% {
+			top: 128px;
+		}
+		50% {
+			top: 132px;
+		}
+		100% {
+			top: 128px;
+		}
+	}
+	@keyframes aniThree {
+		0% {
+			top: 30px;
+		}
+		50% {
+			top: 34px;
+		}
+		100% {
+			top: 30px;
+		}
+	}
+}

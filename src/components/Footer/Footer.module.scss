@@ -1,0 +1,108 @@
+@import "../variables.scss";
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 264px;
+	background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+	padding: 60px 0;
+	overflow: hidden;
+	.footer {
+		max-width: 1440px;
+		width: calc(100% - 200px);
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		.footer__left {
+			width: 490px;
+			.footer__nav {
+				margin-top: 20px;
+				ul {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+
+					a {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 130%;
+						letter-spacing: 0.003em;
+						color: white;
+					}
+				}
+			}
+			.footer__info {
+				margin-top: 50px;
+				display: flex;
+
+				.info {
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 120%;
+					letter-spacing: 0.02em;
+					color: $white;
+					margin-left: 10px;
+					margin-right: 20px;
+				}
+				p:last-child {
+					font-size: 12px;
+					line-height: 120%;
+					letter-spacing: 0.02em;
+					color: $white;
+				}
+			}
+		}
+		.footer__right {
+			position: relative;
+			z-index: 7;
+			width: 334px;
+			height: 144px;
+			h2 {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $white;
+				margin-bottom: 10px;
+			}
+			.btn {
+				display: flex;
+				align-items: center;
+				padding: 10px 20px;
+				gap: 6px;
+				width: 172px;
+				height: 40px;
+				background: $white;
+				border: 1px solid #748bff;
+				backdrop-filter: blur(18px);
+				border-radius: 22px;
+				margin-bottom: 50px;
+				img {
+					width: 16px;
+					height: 14.4px;
+				}
+			}
+			h3 {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: #ffffff;
+				span {
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+				}
+			}
+		}
+	}
+	.footer__bg {
+		position: absolute;
+		z-index: 5;
+		width: 100%;
+		height: 264px;
+		top: -72%;
+		left: 50%;
+	}
+}
