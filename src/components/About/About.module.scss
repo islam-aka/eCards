@@ -2,7 +2,6 @@
 
 .container {
 	width: 100%;
-	height: 410px;
 	position: relative;
 	.about__bg {
 		display: flex;
@@ -10,7 +9,6 @@
 		width: 100%;
 		height: 410px;
 		position: absolute;
-		top: -50px;
 
 		z-index: 5;
 		img {
@@ -24,9 +22,17 @@
 		max-width: 1440px;
 		width: calc(100% - 200px);
 		margin: 50px auto 0 auto;
+		@media screen and (max-width: 1285px) {
+			width: calc(100% - 100px);
+		}
+		@media screen and (max-width: 1050px) {
+			max-width: 932px;
+			width: calc(100% - 60px);
+		}
 
 		.about__title {
-			width: 639px;
+			max-width: 639px;
+			width: 100%;
 			margin-bottom: 40px;
 			.megaTitle {
 				font-weight: 700;
@@ -35,6 +41,10 @@
 				letter-spacing: 0.003em;
 				color: $color-text;
 				margin-bottom: 20px;
+				@media screen and (max-width: 768px) {
+					font-size: 32px;
+					line-height: 120%;
+				}
 			}
 			.subTitle {
 				font-weight: 400;
@@ -47,8 +57,12 @@
 		.about__numbers {
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 			gap: 40px;
 			div {
+				flex: 1;
+				max-width: 386px;
+				min-width: 247px;
 				display: flex;
 				flex-direction: column;
 				gap: 10px;
@@ -60,6 +74,9 @@
 				gap: 10px;
 				background: rgba(255, 255, 255, 0.6);
 				backdrop-filter: blur(2px);
+				@media screen and (max-width: 1050px) {
+					max-width: 100%;
+				}
 				img {
 					width: 38px;
 				}
@@ -80,6 +97,14 @@
 					letter-spacing: 0.003em;
 					color: $sub-title;
 				}
+			}
+			.numbers__one {
+				@media screen and (max-width: 1000px) {
+				}
+			}
+			.numbers__two {
+			}
+			.about__title {
 			}
 		}
 	}

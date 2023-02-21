@@ -30,7 +30,7 @@ const MainScreen = () => {
 						<img src={iconRightLogIn} alt='icon right' />
 					</div>
 				</div>
-				<div className={styles.container__info}>
+				<div className={styles.block}>
 					<div className={styles.info}>
 						<div className={styles.info__icon}>
 							<img src={iconPlus} alt='icon plus' />

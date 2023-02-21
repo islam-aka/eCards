@@ -14,12 +14,13 @@ const Home = () => {
 		<div className={styles.home}>
 			<Header />
 			<MainScreen />
-			{/* <About /> */}
-			{/* <Opportunities /> */}
-			{/* <Conditions /> */}
-			{/* <Partners /> */}
-			{/* <Contacts /> */}
-			{/* <Footer /> */}
+			<About />
+
+			<Opportunities />
+			<Conditions />
+			<Partners />
+			<Contacts />
+			<Footer />
 		</div>
 	)
 }

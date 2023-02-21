@@ -1,6 +1,7 @@
 @import "../variables.scss";
 
 .container {
+	position: relative;
 	max-width: 1440px;
 	width: calc(100% - 200px);
 	margin: 0 auto;
@@ -9,10 +10,7 @@
 	gap: 40px;
 	@media screen and (max-width: 1285px) {
 		width: calc(100% - 100px);
-		height: 872px;
-	}
-	@media screen and (max-width: 768px) {
-		height: 640px;
+		height: auto;
 	}
 
 	&__info {
@@ -42,7 +40,7 @@
 				font-size: 42px;
 				line-height: 120%;
 			}
-			@media screen and (max-width: 560px) {
+			@media screen and (max-width: 680px) {
 				font-size: 24px;
 				line-height: 120%;
 			}
@@ -141,7 +139,7 @@
 				}
 			}
 		}
-		.container__info {
+		.block {
 			max-width: 580px;
 			display: flex;
 			flex-direction: column;
@@ -149,9 +147,13 @@
 			margin-top: 103px;
 			.info {
 				display: flex;
-				align-items: center;
+				flex-direction: column;
+
 				gap: 20px;
 				width: 364px;
+				@media screen and (max-width: 560px) {
+					width: 284px;
+				}
 				.info__icon {
 					display: flex;
 					padding: 6.67px;
@@ -169,6 +171,7 @@
 					flex-direction: column;
 					gap: 10px;
 					h4 {
+						width: 100%;
 						font-style: normal;
 						font-weight: 600;
 						font-size: 18px;
@@ -177,6 +180,7 @@
 						color: $color-text;
 					}
 					p {
+						width: 100%;
 						font-family: "Gotham Pro";
 						font-style: normal;
 						font-weight: 400;
@@ -214,6 +218,8 @@
 		@media screen and (max-width: 768px) {
 			right: -135px;
 			bottom: -290px;
+			width: 280px;
+			height: 280px;
 		}
 	}
 	.blockBlur__two {

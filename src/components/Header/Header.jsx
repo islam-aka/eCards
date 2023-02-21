@@ -14,9 +14,7 @@ const Header = () => {
 	const [menu, setMenu] = useState(false)
 	const [hover, setHover] = useState(false)
 
-	useEffect(() => {
-		console.log(menu)
-	}, [menu])
+	useEffect(() => {}, [menu])
 
 	const onMouseEnter = () => {
 		setHover(true)

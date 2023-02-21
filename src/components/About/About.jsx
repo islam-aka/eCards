@@ -8,7 +8,9 @@ import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 
 const About = () => {
-	const [ref, inView] = useInView({ threshold: 0.5 })
+	const [refOne, inViewOne] = useInView({ threshold: 0.5 })
+	const [refTwo, inViewTwo] = useInView({ threshold: 0.5 })
+	const [refThree, inViewThree] = useInView({ threshold: 0.5 })
 
 	return (
 		<div className={styles.container}>
@@ -25,9 +27,9 @@ const About = () => {
 					</p>
 				</div>
 				<div className={styles.about__numbers}>
-					<div ref={ref}>
+					<div className={styles.numbers__one} ref={refOne}>
 						<img src={iconCard} alt='icon card' />
-						{inView && (
+						{inViewOne && (
 							<CountUp
 								className={styles.about__title}
 								start={0}
@@ -39,9 +41,9 @@ const About = () => {
 							Выпущенных виртуальных карт
 						</p>
 					</div>
-					<div>
+					<div ref={refTwo} className={styles.numbers__two}>
 						<img src={icon} alt='icon' />
-						{inView && (
+						{inViewTwo && (
 							<CountUp
 								className={styles.about__title}
 								start={0}
@@ -53,12 +55,11 @@ const About = () => {
 							Баеров и арбитражных команд
 						</p>
 					</div>
-					<div>
+					<div ref={refThree} className={styles.numbers__three}>
 						<img src={iconDollar} alt='icon dollar' />
-
 						<h3 className={styles.about__title}>
-							Более{' '}
-							{inView && (
+							Более
+							{inViewThree && (
 								<CountUp
 									className={styles.about__title}
 									start={0}

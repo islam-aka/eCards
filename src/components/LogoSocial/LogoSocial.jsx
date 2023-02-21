@@ -165,12 +165,25 @@ const LogoSocial = () => {
 				</div>
 			) : (
 				<div className={styles.social}>
-					<img src={facebook} alt='logo facebook' />
-					<img src={google} alt='logo google' />
-					<img src={tikTok} alt='logo tikTok' />
-					<img src={paypal} alt='logo paypal' />
-					<img src={up} alt='logo up' />
-					<img src={apple} alt='logo apple' />
+					<div>
+						{' '}
+						<img src={facebook} alt='logo facebook' />
+					</div>
+					<div>
+						<img src={google} alt='logo google' />
+					</div>
+					<div>
+						<img src={tikTok} alt='logo tikTok' />
+					</div>
+					<div>
+						<img src={paypal} alt='logo paypal' />
+					</div>
+					<div>
+						<img src={up} alt='logo up' />
+					</div>
+					<div>
+						<img src={apple} alt='logo apple' />
+					</div>
 				</div>
 			)}
 		</>

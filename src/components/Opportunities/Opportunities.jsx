@@ -6,13 +6,20 @@ import iconPlus from '../../assets/svg/iconPlus.svg'
 import iconProfile from '../../assets/svg/profile-2user.svg'
 import iconDownload from '../../assets/svg/download.svg'
 import iconNotification from '../../assets/svg/notification.svg'
-import imgBalance from '../../assets/img/balance.png'
-import imgCards from '../../assets/img/Сards illustartion container.png'
+import imgBalance from '../../assets/img/BalanceBG.png'
+import imgCardOne from '../../assets/img/cardOne.png'
+import imgCardTwo from '../../assets/img/cardTwo.png'
+import imgCardThree from '../../assets/img/cardThree.png'
+import icons from '../../assets/svg/$.svg'
 import imgDistribution from '../../assets/img/Distribution and grouping.png'
 import imgExport from '../../assets/img/Экспорт таблицы.png'
 import imgNotification from '../../assets/img/notification.png'
+import { useInView } from 'react-intersection-observer'
+import Circle from '../Circle/Circle'
+import CountUp from 'react-countup'
 
 const Opportunities = () => {
+	const [ref, inView] = useInView({ threshold: 0.5 })
 	return (
 		<div id='opportunities' className={styles.container}>
 			<div className={styles.container__title}>
@@ -36,24 +43,55 @@ const Opportunities = () => {
 						</div>
 					</div>
 					<div className={styles.score__right}>
-						<img src={imgBalance} alt='image balance' />
-						<div className={styles.right__iconWire}>
-							<p>WIRE</p>
+						<div className={styles.img}>
+							<img src={imgBalance} alt='image balance' />
 						</div>
-						<div className={styles.right__icon}>
-							<img src={iconPlus} alt='icon' />
-						</div>
-						<div className={styles.right__iconUSDT}>
-							<p>USDT</p>
+						<div className={styles.ani}>
+							<Circle ref={ref} inView={inView} className={styles.ani} />
+
+							<div ref={ref} className={styles.statistics}>
+								<img src={icons} alt='icon' />
+								{inView && (
+									<div>
+										<CountUp
+											className={styles.statistics__title}
+											start={0}
+											end={98}
+										/>
+										.
+										<CountUp
+											className={styles.statistics__title}
+											start={0}
+											end={879}
+										/>
+										.
+										<CountUp
+											className={styles.statistics__title}
+											start={0}
+											end={87}
+										/>
+									</div>
+								)}
+								<p className={styles.about__subTitle}>Весь оборот в USDT</p>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className={styles.opportunities__cards}>
-					<div className={styles.blockBlur__cards}></div>
-
-					<div className={styles.card__img}>
-						<img src={imgCards} alt='cards image' />
-					</div>
+					<div className={styles.blockBlur__cards} ref={ref}></div>
+					{inView && (
+						<div className={styles.card__img}>
+							<div className={styles.card__imgTwo}>
+								<img src={imgCardOne} alt='card image' />
+							</div>
+							<div className={styles.card__imgOne}>
+								<img src={imgCardTwo} alt='card image' />
+							</div>
+							<div className={styles.card__imgThree}>
+								<img src={imgCardThree} alt='card image' />
+							</div>
+						</div>
+					)}
 					<div className={styles.card__info}>
 						<div className={styles.card__icon}>
 							<img src={iconInfinitely} alt='wallet icon' />
