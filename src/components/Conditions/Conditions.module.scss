@@ -29,16 +29,38 @@
 		margin: 40px 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		padding: 40px;
 		p {
-			padding: 12px 0 12px 60px;
+			border-bottom: 1px solid $stroke;
+		}
+		p {
 			border-bottom: 1px solid $stroke;
 		}
 		.left__text,
 		.bottom__text {
+			padding: 12px 0 12px 60px;
 			border-right: 1px solid $stroke;
 		}
 		.bottom__text {
 			border-bottom: none;
+		}
+		.right__text {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 120%;
+			letter-spacing: 0.003em;
+			color: $color-text;
+			padding: 11.4px 0 11.4px 60px;
+		}
+		.middle__right {
+			p:last-child {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $color-text;
+				padding: 11.4px 0 11.4px 60px;
+			}
 		}
 	}
 	.conditions__bottom {

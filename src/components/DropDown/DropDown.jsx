@@ -7,7 +7,6 @@ import '../../i18next'
 const DropDown = () => {
 	const { i18n } = useTranslation()
 	const [language, setLanguage] = useState(undefined)
-
 	const [active, setActive] = useState(true)
 
 	const dropDownActive = () => {
@@ -53,7 +52,7 @@ const DropDown = () => {
 			<div className={styles.dropdown__select} onClick={dropDownActive}>
 				<span className={styles.select}>{language}</span>
 				<img
-					className={!active ? styles.active : ''}
+					className={!active ? styles.active : styles.activeNone}
 					src={iconBottom}
 					alt='icon right'
 				/>

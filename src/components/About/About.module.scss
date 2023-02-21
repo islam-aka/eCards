@@ -5,7 +5,7 @@
 	position: relative;
 	.about__bg {
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		width: 100%;
 		height: 410px;
 		position: absolute;
@@ -61,7 +61,6 @@
 			gap: 40px;
 			div {
 				flex: 1;
-				max-width: 386px;
 				min-width: 247px;
 				display: flex;
 				flex-direction: column;

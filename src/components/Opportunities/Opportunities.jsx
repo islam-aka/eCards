@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './Opportunities.module.scss'
 import iconWallet from '../../assets/svg/wallet-money.svg'
 import iconInfinitely from '../../assets/svg/infinitely.svg'
-import iconPlus from '../../assets/svg/iconPlus.svg'
 import iconProfile from '../../assets/svg/profile-2user.svg'
 import iconDownload from '../../assets/svg/download.svg'
 import iconNotification from '../../assets/svg/notification.svg'
@@ -11,7 +10,8 @@ import imgCardOne from '../../assets/img/cardOne.png'
 import imgCardTwo from '../../assets/img/cardTwo.png'
 import imgCardThree from '../../assets/img/cardThree.png'
 import icons from '../../assets/svg/$.svg'
-import imgDistribution from '../../assets/img/Distribution and grouping.png'
+import imgGroupOne from '../../assets/img/group1.png'
+import imgGroupTwo from '../../assets/img/group2.png'
 import imgExport from '../../assets/img/Экспорт таблицы.png'
 import imgNotification from '../../assets/img/notification.png'
 import { useInView } from 'react-intersection-observer'
@@ -20,6 +20,7 @@ import CountUp from 'react-countup'
 
 const Opportunities = () => {
 	const [ref, inView] = useInView({ threshold: 0.5 })
+	const [refImg, inViewImg] = useInView({ threshold: 0.5 })
 	return (
 		<div id='opportunities' className={styles.container}>
 			<div className={styles.container__title}>
@@ -44,7 +45,7 @@ const Opportunities = () => {
 					</div>
 					<div className={styles.score__right}>
 						<div className={styles.img}>
-							<img src={imgBalance} alt='image balance' />
+							<img src={imgBalance} alt=' balance' />
 						</div>
 						<div className={styles.ani}>
 							<Circle ref={ref} inView={inView} className={styles.ani} />
@@ -82,13 +83,13 @@ const Opportunities = () => {
 					{inView && (
 						<div className={styles.card__img}>
 							<div className={styles.card__imgTwo}>
-								<img src={imgCardOne} alt='card image' />
+								<img src={imgCardOne} alt='card ' />
 							</div>
 							<div className={styles.card__imgOne}>
-								<img src={imgCardTwo} alt='card image' />
+								<img src={imgCardTwo} alt='card ' />
 							</div>
 							<div className={styles.card__imgThree}>
-								<img src={imgCardThree} alt='card image' />
+								<img src={imgCardThree} alt='card ' />
 							</div>
 						</div>
 					)}
@@ -122,14 +123,23 @@ const Opportunities = () => {
 							</p>
 						</div>
 					</div>
-					<div className={styles.distribution__image}>
-						<img src={imgDistribution} alt='image distribution and grouping' />
+					<div ref={refImg} className={styles.distribution__image}>
+						{inViewImg && (
+							<div>
+								<div className={styles.imageOne}>
+									<img src={imgGroupOne} alt='distribution and grouping' />
+								</div>
+								<div className={styles.imageTwo}>
+									<img src={imgGroupTwo} alt=' distribution and grouping' />
+								</div>
+							</div>
+						)}
 					</div>
 				</div>
 				<div className={styles.data}>
 					<div className={styles.blockBlur__data}></div>
 					<div className={styles.data__left}>
-						<img src={imgExport} alt='image export data' />
+						<img src={imgExport} alt=' export data' />
 						<div className={styles.checked__one}>
 							<div className={styles.checked}></div>
 							<p>В формате СSV</p>
@@ -170,7 +180,7 @@ const Opportunities = () => {
 						</div>
 					</div>
 					<div className={styles.notification__right}>
-						<img src={imgNotification} alt='image notification system' />
+						<img src={imgNotification} alt=' notification system' />
 					</div>
 					<div className={styles.blockBlur__opportunities}></div>
 				</div>

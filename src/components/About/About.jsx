@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './About.module.scss'
 import iconCard from '../../assets/svg/card.svg'
 import icon from '../../assets/svg/icons.svg'

@@ -21,16 +21,10 @@
 		padding: 7px 12px;
 		gap: 4px;
 		background: $white;
-
 		border-radius: 22px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
-		.active {
-			transition: 0.2s;
-			transform: rotate(90deg);
-		}
 
 		span {
 			font-style: normal;
@@ -39,8 +33,10 @@
 			// line-height: 120%;
 			color: $primary-main;
 		}
-		img {
-			transform: rotate(90deg);
+
+		.active {
+			transition: all 0.2s;
+			transform: rotate(-90deg);
 			padding: 6px 2.72px;
 		}
 	}
@@ -118,6 +114,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		.activeNone {
+			transition: all 0.2s;
+		}
 
 		span {
 			font-style: normal;
